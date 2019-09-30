@@ -67,33 +67,48 @@
 				},
 				{
 					"comment": "List of Cypher built-in functions from http:\/\/docs.neo4j.org\/chunked\/milestone\/query-function.html",
-					"match": "(?i)\\b(ALL|ANY|NONE|SINGLE)(?=\\s*\\()",
+					"match": "(?i)\\b(all|any|exists|none|single)(?=\\s*\\()",
 					"name": "support.function.predicate.cypher"
 				},
 				{
 					"comment": "List of Cypher built-in functions from http:\/\/docs.neo4j.org\/chunked\/milestone\/query-function.html",
-					"match": "(?i)\\b(LENGTH|TYPE|ID|COALESCE|HEAD|LAST|TIMESTAMP|STARTNODE|ENDNODE|TOINT|TOFLOAT)(?=\\s*\\()",
+					"match": "(?i)\\b(coalesce|endNode|head|id|last|length|properties|randomUUID|size|size|size|startNode|timestamp|toBoolean|toFloat|toInteger|type)(?=\\s*\\()",
 					"name": "support.function.scalar.cypher"
 				},
 				{
 					"comment": "List of Cypher built-in functions from http:\/\/docs.neo4j.org\/chunked\/milestone\/query-function.html",
-					"match": "(?i)\\b(NODES|RELATIONSHIPS|LABELS|EXTRACT|FILTER|TAIL|RANGE|REDUCE)(?=\\s*\\()",
-					"name": "support.function.collection.cypher"
+					"match": "(?i)\\b(extract|filter|keys|labels|nodes|range|reduce|relationships|reverse|tail)(?=\\s*\\()",
+					"name": "support.function.list.cypher"
 				},
 				{
 					"comment": "List of Cypher built-in functions from http:\/\/docs.neo4j.org\/chunked\/milestone\/query-function.html",
-					"match": "(?i)\\b(ABS|ACOS|ASIN|ATAN|ATAN2|COS|COT|DEGREES|E|EXP|FLOOR|HAVERSIN|LOG|LOG10|PI|RADIANS|RAND|ROUND|SIGN|SIN|SQRT|TAN)(?=\\s*\\()",
+					"match": "(?i)\\b(abs|ceil|floor|rand|round|sign|e|exp|log|log10|sqrt|acos|asin|atan|atan2|cos|cot|degrees|haversin|pi|radians|sin|tan)(?=\\s*\\()",
 					"name": "support.function.math.cypher"
 				},
 				{
 					"comment": "List of Cypher built-in functions from http:\/\/docs.neo4j.org\/chunked\/milestone\/query-function.html",
-					"match": "(?i)\\b(COUNT|sum|avg|max|min|stdev|stdevp|percentileDisc|percentileCont|collect)(?=\\s*\\()",
+					"match": "(?i)\\b(avg|collect|count|max|min|percentileCont|percentileDisc|stDev|stDevP|sum)(?=\\s*\\()",
 					"name": "support.function.aggregation.cypher"
 				},
 				{
 					"comment": "List of Cypher built-in functions from http:\/\/docs.neo4j.org\/chunked\/milestone\/query-function.html",
-					"match": "(?i)\\b(STR|REPLACE|SUBSTRING|LEFT|RIGHT|LTRIM|RTRIM|TRIM|LOWER|UPPER|SPLIT)(?=\\s*\\()",
+					"match": "(?i)\\b(left|lTrim|replace|reverse|right|rTrim|split|substring|toLower|toString|toUpper|trim)(?=\\s*\\()",
 					"name": "support.function.string.cypher"
+				},
+				{
+					"comment": "List of Cypher built-in functions from http:\/\/docs.neo4j.org\/chunked\/milestone\/query-function.html",
+					"match": "(?i)\\b(date|date.realtime|date.statement|date.transaction|date.truncate|datetime|datetime.realtime|datetime.statement|datetime.transaction|datetime.truncate|localdatetime|localdatetime.realtime|localdatetime.statement|localdatetime.transaction|localdatetime.truncate|localtime|localtime.realtime|localtime.statement|localtime.transaction|localtime.truncate|time|time.realtime|time.statement|time.transaction|time.truncate)(?=\\s*\\()",
+					"name": "support.function.temporalinstant.cypher"
+				},
+				{
+					"comment": "List of Cypher built-in functions from http:\/\/docs.neo4j.org\/chunked\/milestone\/query-function.html",
+					"match": "(?i)\\b(duration|duration.between|duration.inMonths|duration.inDays|duration.inSeconds)(?=\\s*\\()",
+					"name": "support.function.temporalduration.cypher"
+				},
+				{
+					"comment": "List of Cypher built-in functions from http:\/\/docs.neo4j.org\/chunked\/milestone\/query-function.html",
+					"match": "(?i)\\b(distance|point)(?=\\s*\\()",
+					"name": "support.function.spatial.cypher"
 				}
 			]
 		},
