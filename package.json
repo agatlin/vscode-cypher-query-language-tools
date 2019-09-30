@@ -2,7 +2,7 @@
     "name": "vscode-cypher-query-language-tools",
     "displayName": "Cypher Query Language Tools for Neoj",    
     "description": "Syntax highlighting, code completion, and related tools for Neo4j's Cypher Query Language with support for the Awesome Procedures on Cypher (APOC), Graph Algorithms, and GraphQL libraries.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "publisher": "AnthonyJGatlin",
     "license": "MIT",
     "repository": {

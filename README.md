@@ -2,7 +2,7 @@
 
 ## Description
 
-This [Visual Studio Code](https://code.visualstudio.com/) extension provides basic syntax highlighting, code completion, and related tools for [Neo4j's](http://neo4j.com/) [Cypher Query Language](http://neo4j.com/developer/cypher/) with support for Neo4j's [Awesome Procedures on Cypher (APOC)](https://neo4j.com/docs/labs/apoc/current/), [Graph Algorithms](https://neo4j.com/docs/graph-algorithms/current/), and [GraphQL](https://neo4j.com/labs/grandstack-graphql/) libraries.
+This [Visual Studio Code](https://code.visualstudio.com/) extension provides basic syntax highlighting, code completion (coming soon), and related tools for [Neo4j's](http://neo4j.com/) [Cypher Query Language](http://neo4j.com/developer/cypher/) with support for Neo4j's [Awesome Procedures on Cypher (APOC)](https://neo4j.com/docs/labs/apoc/current/), [Graph Algorithms](https://neo4j.com/docs/graph-algorithms/current/), and [GraphQL](https://neo4j.com/labs/grandstack-graphql/) libraries.
 
 This extension also works with Cypher files conforming to the [OpenCypher](https://www.opencypher.org/) standard such as those from [AnzoGraph](https://www.cambridgesemantics.com/product/anzograph/), [Memgraph](https://memgraph.com/), [RedisGraph](https://oss.redislabs.com/redisgraph/), [SAP Hana Graph](https://help.sap.com/viewer/f381aa9c4b99457fb3c6b53a2fd29c02/2.0.00/en-US/4c3ee700e7a8458baed3f1141d9380f3.html), or [OpenCypher for Apache Spark (Codename: Morpheus)](https://github.com/opencypher/morpheus). Please note that none of these tools yet provide a complete Cypher implementation.
 
@@ -61,7 +61,6 @@ The initial version of this extension is very simple but has ambitious long term
 - Review existing functionality to find gaps in Cypher keywords (including deprecated keywords) for syntax highlighting.
 - Develop a matrix of supported Cypher keywords by graph database vendor and version.
 - Allow users to choose syntax highlighting based on graph database vendor and version.
-- Review existing functionality to find gaps in function/procedure lists for code completion.
 - Collect information for all functions including method signatures, descriptions, usage examples, links to documentation and other references, and links to replacement methods for deprecated items.
 - Provide access within the extension to code completion, documentation, examples, and links to official Neo4j documentation for all Neo4j, APOC, Graph Algorithms, and GraphQL functions and procedures, links to outside references (where appropriate), and links to replacement functions for deprecated items.
 - Provide on-hover documentation for Cypher clauses and functions and those of other Neo4j libraries.
