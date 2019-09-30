@@ -1,0 +1,64 @@
+{
+    "name": "vscode-cypher-query-language-tools",
+    "displayName": "Cypher Query Language Tools for Neoj",    
+    "description": "Syntax highlighting, code completion, and related tools for Neo4j's Cypher Query Language with support for the Awesome Procedures on Cypher (APOC), Graph Algorithms, and GraphQL libraries.",
+    "version": "0.1.0",
+    "publisher": "AnthonyJGatlin",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/agatlin/vscode-cypher-tools"
+    },
+    "icon": "assets/logo.png",
+    "galleryBanner": {
+        "color": "#292b31",
+        "theme": "dark"
+    },
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Languages", "Programming Languages", "Snippets", "Linters", "Other"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "cypher",
+                "aliases": [
+                	"Cypher Query Language",
+                    "Cypher QL",                    
+                    "cypher"
+                ],
+                "extensions": [
+                    ".cql",
+                    ".cyp",
+                    ".cypher"
+                ],
+                "configuration": "./cypher.configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "cypher",
+                "scopeName": "source.cypher",
+                "path": "./syntaxes/cypher-language.json"
+            },
+            {
+                "injectTo": [
+                    "source.js",
+                    "source.ts",
+                    "source.jsx",
+                    "source.js.jsx",
+                    "source.tsx",
+                    "source.python"
+                ],
+                "scopeName": "cypher",
+                "path": "./syntaxes/cypher-embedded.json"
+            }
+        ]
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "vsce": "*"
+    }
+}

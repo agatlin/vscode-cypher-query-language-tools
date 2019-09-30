@@ -1,0 +1,15 @@
+trigger:
+  branches:
+    include:
+    - refs/tags/v*
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: |
+    npm install
+    npx vsce publish -p ${VSCE_TOKEN}
+  env:
+    VSCE_TOKEN: $(vsce.token)
+  displayName: 'Publish to the marketplace'
