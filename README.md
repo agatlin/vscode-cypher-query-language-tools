@@ -44,41 +44,53 @@ Theoretically, the version of the extension in the VS Code Marketplace will alwa
 
 This extension is automatically active whenever files with ```cypher```, ```cql```, or ```cyp``` extensions are loaded. (Per the [Cypher Style Guide](https://neo4j.com/developer/cypher-style-guide/), ```cypher``` is the preferred file extension for Cypher files.)
 
-You may also force activation of the extension on any file by overriding the language mode for the active file. This can be done by any of the following:
+You may also force activation of the extension on any file by overriding the language mode for any open file. This can be done by any of the following:
 
 1. Clicking on the file type by in the lower navigation bar and then selecting ```Cypher Query Language (Cypher)```.
-2. ```Click Ctrl+L, M``` (or ```Cmd-K, M``` on Mac) to bring up the Language Mode dialog. Select ```Cypher Query Language (Cypher)``` from the list of available languages.
+2. Click ```Ctrl+K, M``` (or ```Cmd-K, M``` on Mac) to bring up the Language Mode dialog. Select ```Cypher Query Language (Cypher)``` from the list of available languages.
 3. Press ```Ctrl-Shift-P``` (or ```Cmd-Shift-P``` on Mac) to bring up the Command Palette. Then, select the ```Change Language Mode``` command. Select ```Cypher Query Language (Cypher)``` from the list of available languages.
 
 ## Issues
 
-Any bugs or other issues can be submitted to the [Issues](https://github.com/agatlin/vscode-cypher-query-language-tools/issues) section of this repository. If you feel comfortable in correcting the issue, please feel free to make the correction and submit a pull request.
+Any bugs or other issues can be submitted through the [Issues](https://github.com/agatlin/vscode-cypher-query-language-tools/issues) section of this repository. If you feel comfortable in correcting the issue, please feel free to make the correction and submit a pull request.
 
 ## Roadmap
 
 The initial version of this extension is very simple but has ambitious long term goals. Some of the planned functionality is described below.
 
-- Review existing functionality to find gaps in Cypher keywords (including deprecated keywords) for syntax highlighting.
+- Review existing functionality to find gaps in implmented Cypher keywords (including deprecated keywords) and functions for syntax highlighting.
 - Develop a matrix of supported Cypher keywords by graph database vendor and version.
-- Allow users to choose syntax highlighting based on graph database vendor and version.
+- Allow users to choose syntax highlighting and other functionality based on graph database vendor and version.
+- Provide embedded syntax highlighting for SQL in commands such as [apoc.load.jdbc](http://neo4j-contrib.github.io/neo4j-apoc-procedures/3.5/database-integration/load-jdbc/).
+- Provide intelligent quote replacement and escaping. (Cypher statements frequently include quotes within quotes within quotes as with apoc.load.jdbc wrapped inside apoc.periodic.iterate.)
+- Support user-configurable options for syntax highlighting and other functionality.
 - Collect information for all functions including method signatures, descriptions, usage examples, links to documentation and other references, and links to replacement methods for deprecated items.
 - Provide access within the extension to code completion, documentation, examples, and links to official Neo4j documentation for all Neo4j, APOC, Graph Algorithms, and GraphQL functions and procedures, links to outside references (where appropriate), and links to replacement functions for deprecated items.
 - Provide on-hover documentation for Cypher clauses and functions and those of other Neo4j libraries.
 - Provide code snippets and keyboard shortcuts for useful Cypher queries. (This includes many data profiling and administrative queries.)
-- Provide support for auto-complete of properties and labels available through db.labels() and db.properties().
+- Provide support for auto-complete of properties and labels which can be reflected through db.labels() and db.properties().
 - Implement FlexiSearch module to provide basic search functionality across library procedures, descriptions, and other documentation. (Finding the right procedure or function now can be confusing for new users.)
-- Provide support for the notion of "chainable Cypher snippet groups" where the output of one snippet can be piped into another snippet, exported, or stored for later use.
-- Implement a pluggable architecture so other libraries in the Neo4j ecosystem, like those from GraphAware can also benefit from code completion and built-in hover documentation.
 - Provide the ability to connect to running Neo4j instances through the bolt JavaScript driver.
 - Provide the ability to store connection information for multiple Neoj databases.
 - Provide the ability to integrate directly with the Cypher Shell as a VS Code Terminal.
 - Provide the ability to run queries through Visual Studio Code.
+- Provide the ability to store common parameters for re-use in multiple queries.
+- Provide a superset of Cypher commands such as a USING statement which allows users to choose which connection should be used for running a specific query or set of queries.
+- Provide support for named paramterized commands which can be reused as functions within other commands.
+- Provide support for snippet sets or snippet groups where users can quickly run sets of related queries. 
+Provide support for the notion of "chainable Cypher snippet groups" where the output of one snippet can be piped into another snippet, exported, or stored for later use.
+- Implement a pluggable architecture so other libraries in the Neo4j ecosystem, like those from GraphAware can also benefit from code completion and built-in hover documentation.
 - Provide the ability to download and run Docker images for Enterprise or Community Edition along with relevant version-associated plugins for APOC, the Graph Algorithms Library, Graph QL, and from elsewhere in the Neo4j ecosystem.
 - Provide basic capabailities to wrap queries in EXPLAIN, PROFILE so queries can be better analyzed and timed.
 - Provide :begin, :commit to support to database changes can be tested and rolled back if desired.
 - Provide code re-formatting functionality to reformat code according to the Cypher Style Guide.
 - Implement a true Language Server and Language Client for Cypher. Implementation of an actual Language Server/Language Client architecture will allow the code to run within Visual Studio (not just VS Code) as well as other Language Server compliant platforms.
 - Begin preparations for addingGraph Query Language (GQL) support.
+- Provide basic graph visualization and exploration using one of the available Force Directed Graph JavaScript libraries. 
+
+Coming Soon...
+
+Code completion is under development should be available sometime around October 4th or 5th.
 
 ## Contribute
 
