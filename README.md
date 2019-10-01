@@ -1,3 +1,7 @@
+[![Version](https://vsmarketplacebadge.apphb.com/version-short/AnthonyJGatlin.vscode-cypher-query-language-tools.svg)](https://marketplace.visualstudio.com/items?itemName=AnthonyJGatlin.vscode-cypher-query-language-tools)
+[![Rating](https://vsmarketplacebadge.apphb.com/rating-short/AnthonyJGatlin.vscode-cypher-query-language-tools.svg)](https://marketplace.visualstudio.com/items?itemName=AnthonyJGatlin.vscode-cypher-query-language-tools)
+[![Installs](https://vsmarketplacebadge.apphb.com/installs/AnthonyJGatlin.vscode-cypher-query-language-tools.svg)](https://marketplace.visualstudio.com/items?itemName=AnthonyJGatlin.vscode-cypher-query-language-tools)
+
 # Cypher Query Language Tools for Neo4j
 
 ## Description
