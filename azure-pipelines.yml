@@ -9,7 +9,10 @@ pool:
 steps:
 - script: |
     npm install
+    npm i -g ovsx
     npx vsce publish -p ${VSCE_TOKEN}
+    npx ovsx publish -p ${OVSX_TOKEN}
   env:
     VSCE_TOKEN: $(vsce.token)
+    OVSX_TOKEN: $(osvx.token)
   displayName: 'Publish to the marketplace'
